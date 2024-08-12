@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfazGrafica.AdminUsuarios">
+   <children>
+      <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuarios Administradores">
+         <font>
+            <Font name="Apple Braille" size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblUsuariosAdmins" layoutX="14.0" layoutY="45.0" prefHeight="122.0" prefWidth="567.0">
+        <columns>
+          <TableColumn fx:id="colCodigoAdmin" prefWidth="97.0" text="Codigo" />
+          <TableColumn fx:id="colNombreAdmin" prefWidth="166.0" text="Nombre" />
+            <TableColumn fx:id="colPasswordAdmin" prefWidth="166.0" text="Password" />
+            <TableColumn fx:id="colEnSesionAdmin" prefWidth="137.0" text="EnSesion" />
+        </columns>
+      </TableView>
+      <Group layoutX="355.0" layoutY="13.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#agregarAdminUsers" text="Agregar" />
+            <Button layoutX="73.0" mnemonicParsing="false" onAction="#modificarAdminUsers" text="Modificar" />
+            <Button layoutX="152.0" mnemonicParsing="false" onAction="#eliminarAdminUsers" text="Eliminar" />
+         </children>
+      </Group>
+      <Text layoutX="25.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuarios Comunes">
+         <font>
+            <Font name="Apple Braille" size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblUsuariosComunes" layoutX="25.0" layoutY="221.0" prefHeight="122.0" prefWidth="567.0">
+         <columns>
+            <TableColumn fx:id="colCodigoComun" prefWidth="89.0" text="Codigo" />
+            <TableColumn fx:id="colNombreComun" prefWidth="162.0" text="Nombre" />
+            <TableColumn fx:id="colPasswordComun" prefWidth="161.0" text="Password" />
+            <TableColumn fx:id="colEnSesionComun" prefWidth="154.0" text="EnSesion" />
+         </columns>
+      </TableView>
+      <Group layoutX="366.0" layoutY="189.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#agregarComunUsers" text="Agregar" />
+            <Button layoutX="73.0" mnemonicParsing="false" onAction="#modificarComunUsers" text="Modificar" />
+            <Button layoutX="152.0" mnemonicParsing="false" onAction="#eliminarComunUsers" text="Eliminar" />
+         </children>
+      </Group>
+      <Button layoutX="514.0" layoutY="361.0" mnemonicParsing="false" onAction="#regresar" text="Regresar" />
+   </children>
+</AnchorPane>
